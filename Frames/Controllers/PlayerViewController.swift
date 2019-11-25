@@ -7,7 +7,7 @@ class PlayerViewController: UIViewController {
     private var didScrollToInitialVideo = false
     @IBOutlet weak var collectionView: UICollectionView!
     
-    func playVisibleCellVideo() {
+    private func playVisibleCellVideo() {
         let playerCell = collectionView.visibleCell as? PlayerCell
         if let row = collectionView.visibleCellIndexPath?.row {
             playerCell?.playerView?.play(url: videos[row].videoUrl)
