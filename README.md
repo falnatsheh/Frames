@@ -15,7 +15,7 @@ https://vimeo.com/375491031
 
 - The app uses [Coverr](https://coverr.co/) APIs (It's similar to unsplash.com but for videos) to get video posts/links.
 
-## Suggestions how to improve / expand the features of this app
+## Suggestions on how to improve / expand the features of this app
 - Since it’s a simple example app I used MVC. If you would like me to update the sample app to MVVM architecture and add unit/UI test please let me know (that would be my default setup for a large project). 
 
 -  AVPlayers handling could be moved to a separate manager class. This would provide a smoother transition when animating the player between different views.
