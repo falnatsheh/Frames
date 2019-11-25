@@ -9,7 +9,7 @@ https://vimeo.com/375491031
 
 - The app built using a simple MVC architecture. It contains two VCs, one that displays video posts (`MainViewController`) and another that displays videos in full screen (`PlayerViewController`). Storage, API Client, Views and Models are all separated into their own components/classes. 
 
-- The tricky part of working with video in a UICollectionView is AVPlayer cell recycling. My strategy in this app is to load videos when they're visible to the user and remove them when they're not (more precisely when `prepareForReuse` is called). 
+- The tricky part of working with videos in a UICollectionView is AVPlayer cell recycling. My strategy in this app is to load videos when they're visible to the user and remove them when they're not (more precisely when `prepareForReuse` is called). 
 
 - The app uses [Coverr](https://coverr.co/) APIs (It's similar to unsplash.com but for videos) to get video posts/links.
 
