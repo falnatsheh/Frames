@@ -13,6 +13,8 @@ https://vimeo.com/375491031
 
 - The app uses [Coverr](https://coverr.co/) APIs (It's similar to unsplash.com but for videos) to get video posts/links.
 
+Note: `MainViewController.playVisibleCellVideo()` can be called multiple times on the same video when the user scroll. However, only one call will result in creating an AVPlayer,  other requests will be ignored (See also `VideoPlayerView.play(url:)` for more details).
+
 ## Suggestions on how to improve / expand the features of this app
 - Since it’s a simple example app I used MVC. If you would like me to update the sample app to MVVM architecture and add unit/UI test please let me know (that would be my default setup for a large project). 
 
