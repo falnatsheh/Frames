@@ -5,7 +5,6 @@ class PlayerCell: UICollectionViewCell {
     @IBOutlet weak var playerView: VideoPlayerView!
     @IBOutlet weak var videoTitle: UILabel!
     @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var closeButton: UIButton!
     
     override func prepareForReuse() {
         super.prepareForReuse()
