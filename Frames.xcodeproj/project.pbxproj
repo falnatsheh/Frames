@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E06B8E10238C3DA100DD6D67 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06B8E0F238C3DA100DD6D67 /* PlayerCell.swift */; };
 		E0907441238C241100C9C37E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0907440238C241100C9C37E /* AppDelegate.swift */; };
 		E0907443238C241100C9C37E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0907442238C241100C9C37E /* SceneDelegate.swift */; };
 		E0907448238C241100C9C37E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0907446238C241100C9C37E /* Main.storyboard */; };
@@ -21,9 +22,11 @@
 		E0907475238C24BE00C9C37E /* CoverrClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E090746C238C24BE00C9C37E /* CoverrClient.swift */; };
 		E0907476238C24BE00C9C37E /* FavoriteDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = E090746E238C24BE00C9C37E /* FavoriteDao.swift */; };
 		E0907479238C24D900C9C37E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0907478238C24D900C9C37E /* MainViewController.swift */; };
+		E0913330238C5F7900CA12FB /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E091332F238C5F7900CA12FB /* UICollectionView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E06B8E0F238C3DA100DD6D67 /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 		E090743D238C241100C9C37E /* Frames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Frames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0907440238C241100C9C37E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0907442238C241100C9C37E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +43,7 @@
 		E090746C238C24BE00C9C37E /* CoverrClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverrClient.swift; sourceTree = "<group>"; };
 		E090746E238C24BE00C9C37E /* FavoriteDao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteDao.swift; sourceTree = "<group>"; };
 		E0907478238C24D900C9C37E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E091332F238C5F7900CA12FB /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 				E0907463238C24BD00C9C37E /* Controllers */,
 				E090746A238C24BE00C9C37E /* Clients */,
 				E090746D238C24BE00C9C37E /* Storage */,
+				E0913331238C5F7F00CA12FB /* Extensions */,
 				E0907440238C241100C9C37E /* AppDelegate.swift */,
 				E0907442238C241100C9C37E /* SceneDelegate.swift */,
 				E0907446238C241100C9C37E /* Main.storyboard */,
@@ -102,6 +107,7 @@
 			children = (
 				E0907466238C24BD00C9C37E /* VideoPlayerView.swift */,
 				E0907467238C24BD00C9C37E /* VideoCell.swift */,
+				E06B8E0F238C3DA100DD6D67 /* PlayerCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -129,6 +135,14 @@
 				E090746E238C24BE00C9C37E /* FavoriteDao.swift */,
 			);
 			path = Storage;
+			sourceTree = "<group>";
+		};
+		E0913331238C5F7F00CA12FB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E091332F238C5F7900CA12FB /* UICollectionView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E06B8E10238C3DA100DD6D67 /* PlayerCell.swift in Sources */,
 				E0907475238C24BE00C9C37E /* CoverrClient.swift in Sources */,
 				E0907472238C24BE00C9C37E /* VideoCell.swift in Sources */,
 				E0907474238C24BE00C9C37E /* CoverrResponse.swift in Sources */,
@@ -211,6 +226,7 @@
 				E0907479238C24D900C9C37E /* MainViewController.swift in Sources */,
 				E0907476238C24BE00C9C37E /* FavoriteDao.swift in Sources */,
 				E0907443238C241100C9C37E /* SceneDelegate.swift in Sources */,
+				E0913330238C5F7900CA12FB /* UICollectionView+Extensions.swift in Sources */,
 				E0907470238C24BE00C9C37E /* PlayerViewController.swift in Sources */,
 				E0907471238C24BE00C9C37E /* VideoPlayerView.swift in Sources */,
 			);

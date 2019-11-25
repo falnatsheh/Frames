@@ -6,15 +6,7 @@ class MainViewController: UIViewController {
     private let coverrClient = CoverrClient()
     private var videos: [Video] = []
     private let favoriteDao = FavoriteDao()
-    private var visibleCellIndexPath: IndexPath? {
-        let visibleRect = CGRect(origin: collectionView.contentOffset, size: collectionView.bounds.size)
-        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
-        return collectionView.indexPathForItem(at: visiblePoint)
-    }
-    private var visibleCell: VideoCell? {
-        guard let indexPath = visibleCellIndexPath else { return nil }
-        return collectionView.cellForItem(at: indexPath) as? VideoCell
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,9 +23,11 @@ class MainViewController: UIViewController {
     }
     
     func playVisibleCellVideo() {
-        let videoCell = self.visibleCell
+        let videoCell = collectionView.visibleCell as? VideoCell
         videoCell?.activityIndicator.stopAnimating()
-        videoCell?.playerView?.play(url: videos[visibleCellIndexPath!.row].videoUrl)
+        if let visibleCellIndex = collectionView.visibleCellIndexPath?.row {
+            videoCell?.playerView?.play(url: videos[visibleCellIndex].videoUrl)
+        }
     }
     
     @objc func favoriteButtonTapped(button : UIButton){
@@ -65,7 +59,8 @@ extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let playerViewController : PlayerViewController = mainStoryboard.instantiateViewController(withIdentifier: "playerViewController") as! PlayerViewController
-        playerViewController.video = videos[indexPath.row]
+        playerViewController.videos = videos
+        playerViewController.initialVideoIndex = indexPath.row
         self.present(playerViewController, animated: true, completion: nil)
     }
      
